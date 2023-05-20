@@ -1,0 +1,21 @@
+image: gitpod/workspace-node-lts
+
+# Commands that will run on workspace start
+tasks:
+  - name: Setup, Install & Build
+    init: npm install n8n -g
+
+# when ready to test the node
+# In your node directory
+# $ npm run build
+# $ npm link
+# then $ cd ~/.n8n/nodes/
+# $ npm link n8n-nodes-package-name
+# $ n8n start
+
+# Ports to expose on workspace startup
+ports:
+  - port: 6789
+    onOpen: open-preview
+    name: n8n
+    description: n8n
