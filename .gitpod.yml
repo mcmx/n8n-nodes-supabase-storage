@@ -2,8 +2,9 @@ image: gitpod/workspace-node-lts
 
 # Commands that will run on workspace start
 tasks:
-  - name: Setup, Install & Build
-    init: npm install n8n -g
+  - name: Install n8n and dependencies
+    init: npm install n8n -g && npm i
+    # command: n8n start
 
 # when ready to test the node
 # In your node directory
